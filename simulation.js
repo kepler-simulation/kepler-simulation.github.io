@@ -63,7 +63,7 @@ function setup() {
 function draw() {
     background(255); // Hintergrund der Simulation Weiss
     var datapointlength = 200; // Maximale Länge der Diagramme
-    zentralgestirn.mass = document.getElementById("zentraglestirnmass").value // Masse des Zentralgestirns auf die Masse des Reglers setzen
+    zentralgestirn.mass = document.getElementById("zentralgestirnmass").value // Masse des Zentralgestirns auf die Masse des Reglers setzen
 
     // Für jeden Planeten in der Liste
     for (let planet of planets) {
