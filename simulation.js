@@ -86,7 +86,7 @@ function draw() {
     // Neuen Datenpunkt hinzufügen
     chartdata_planet_a.push({
         x: chartdata_planet_a.length + 1,
-        y: Math.sqrt((movers[0].vel.x * movers[0].vel.x) + (movers[0].vel.y * movers[0].vel.y)),
+        y: Math.sqrt((planets[0].vel.x * planets[0].vel.x) + (planets[0].vel.y * planets[0].vel.y)),
         color: "#424B54"
     })
     chart_planet_a.render() // Diagramm für Planet A rendern
@@ -103,7 +103,7 @@ function draw() {
     // Neuen Datenpunkt hinzufügen
     chartdata_planet_b.push({
         x: chartdata_planet_b.length + 1,
-        y: Math.sqrt((movers[1].vel.x * movers[1].vel.x) + (movers[1].vel.y * movers[1].vel.y)),
+        y: Math.sqrt((planets[1].vel.x * planets[1].vel.x) + (planets[1].vel.y * planets[1].vel.y)),
         color: "#424B54"
     })
     chart_planet_b.render() // Diagramm für Planet B rendern
