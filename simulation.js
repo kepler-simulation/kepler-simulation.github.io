@@ -76,7 +76,7 @@ function draw() {
 
     // Daten für Diagramm von Planet A erneuern
     // Wenn die länge der Datenpunkte grösser als das gesetzte Maximum ist
-    if (chartdata.length >= datapointlength) {
+    if (chartdata_planet_a.length >= datapointlength) {
         chartdata_planet_a.shift() // Ältester Datenpunkt löschen
             // X-Achse der Datenpunkte jeweils -1
         chartdata_planet_a.forEach((datapoint) => {
