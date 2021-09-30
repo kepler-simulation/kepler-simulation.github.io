@@ -1,0 +1,140 @@
+<!-- made by @LaurinSeeholzer -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keplersche Gesetze | Computersimulation</title>
+    <!-- Titel der Webseite -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <style>
+        .canvasjs-chart-credit {
+            display: none;
+        }
+        
+        .header {
+            padding: 10px;
+            background: linear-gradient(to right bottom, #424B54, #93A8AC);
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .icons {
+            margin: 20px;
+            height: 30px;
+            width: 30px;
+            float: right;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        
+        #simulation {
+            width: 100%;
+            text-align: center;
+        }
+        
+        canvas {
+            display: inline;
+        }
+        
+        #settings,
+        #statistics {
+            margin: 50px;
+        }
+        
+        #hide {
+            height: 50px;
+            width: 100%;
+            background-color: #ffffff;
+            position: relative;
+            top: 30px;
+            z-index: 100;
+        }
+        
+        .form-range::-webkit-slider-thumb {
+            background: #424B54!important;
+        }
+        
+        .form-range::-moz-range-thumb {
+            background: #424B54!important;
+        }
+        
+        .form-range::-ms-thumb {
+            background: #424B54!important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid header" id="header">
+        <h1>Keplersche Gesetze</h1>
+        <h2>Computersimulation</h2>
+        <a href="https://github.com/LaurinSeeholzer/" style="flex: 1"><i data-feather="github" color="#ffffff" class="icons"></i></a>
+    </div>
+    <div class="containter">
+        <div class="row">
+            <div class="col-lg">
+                <div id="settings">
+                    <h3>Einstellungen</h3>
+                    <label for="attractormass" class="form-label">Masse des Zentralgestirns</label>
+                    <input type="range" class="form-range" id="attractormass" min="50" max="250">
+                </div>
+                <div id="statistics">
+                    <h3>Geschwindigkeit</h3>
+                    <div class="row">
+                        <!-- Diagramm für Planet A -->
+                        <div class="col-md">
+                            <div id="hide">
+                                <h5>
+                                    Planet A
+                                    <!-- Diagrammtitel -->
+                                </h5>
+                            </div>
+                            <div id="chartContainer_planet_a" style="height: 300px; width: 100%;">
+                                <!-- Diagramm -->
+                            </div>
+                        </div>
+                        <!-- Diagramm für Planet B-->
+                        <div class="col-md">
+                            <div id="hide">
+                                <h5>
+                                    Planet B
+                                    <!-- Diagrammtitel -->
+                                </h5>
+                            </div>
+                            <div id="chartContainer_planet_b" style="height: 300px; width: 100%;">
+                                <!-- Diagramm -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Simulationscontainer -->
+            <div class="col-lg" id="simulation">
+                <main>
+                </main>
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="planet.js"></script>
+    <script src="zentalgestirn.js"></script>
+    <script src="simulation.js"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+
+</html>
